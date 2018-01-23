@@ -15,12 +15,8 @@ x2dotdot = diff(x2, 2);
 eq1 = J2 * a2 == dot(cross(x2(0), W2), zHat) + T2;
 eq2 = J1 * a1 == dot(cross(x1(0), W1) - cross(R(0), F), zHat) + T1 - T2;
 eq3 = m2 * (Rdotdot(0) + x2dotdot(0)) == F + W2;
-[T1sln T2sln Fxsln Fysln] = solve([eq1 eq2 eq3], [T1 T2 Fx Fy]);
+[T1sln, T2sln, Fxsln, Fysln] = solve([eq1 eq2 eq3], [T1 T2 Fx Fy]);
 simplify(T1sln)
 simplify(T2sln)
-simplify (Fxsln)
+simplify(Fxsln)
 simplify(Fysln)
-
-
-
-
